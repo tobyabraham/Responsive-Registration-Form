@@ -1,0 +1,97 @@
+body {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    background: hsl(0, 100%, 74%);
+    height: 100%;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.container {
+}
+
+.main-left, 
+.main-right {
+    flex: 50%;
+}
+
+.main-left {
+    padding: 200px 0;
+}
+
+.main-right {
+
+}
+
+.main-left > article {
+    margin: auto;
+    width: 400px;
+    color: hsl(0, 0%, 95%);
+}
+
+.main-right > header {
+    margin-top: 70px;
+    border-radius: 20px;
+    background: hsl(248, 32%, 49%);
+    padding: 1px;
+    width:500px ;
+    text-align: center;
+    color: hsl(0, 0%, 95%);
+}
+
+.reg-form {
+    border-radius: 10px;
+    background: white;
+    width: 440px;
+    padding: 30px;
+    margin-top: 18px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  
+  .form-input {
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid hsl(246, 25%, 77%);
+  }
+
+  .form-input:focus {
+    border: 1px solid hsl(249, 10%, 26%);
+    outline: hsl(249, 10%, 26%);
+  }
+
+  .submit-btn {
+      padding: 15px;
+      background-color: hsl(154, 59%, 51%);
+      color: hsl(0, 0%, 95%);
+      border: none;
+      border-radius: 5px;
+  }
+
+@media (max-width: 375px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-items: stretch;
+        background: url("images/bg-intro-mobile.png");
+    }
+    
+}
+
+@media (min-width: 375px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        height: 97vh;
+        align-items: stretch;
+        background: url("images/bg-intro-desktop.png");
+    }
+}
