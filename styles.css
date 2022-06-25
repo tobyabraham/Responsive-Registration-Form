@@ -1,25 +1,14 @@
 body {
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    font-weight: 400;
     background: hsl(0, 100%, 74%);
     height: 100%;
 }
 
 h1 {
     font-weight: 700;
-    font-size: 50px;
+    font-size: 45px;
     line-height: 50px;
-}
-
-p {
- 	font-size:13px;
- 	margin-left: 20px;
- }
-
-ins{
-	color: hsl(0, 100%, 74%) ;
-	text-decoration: none;
 }
 
 .container {
@@ -31,7 +20,7 @@ ins{
 }
 
 .main-left {
-    padding: 200px 0;
+    padding: 150px 0;
 }
 
 .main-right {
@@ -44,22 +33,46 @@ ins{
     color: hsl(0, 0%, 95%);
 }
 
+.main-left > article > p {
+    font-size: small;
+    padding: 0;
+    margin-left: 0;
+}
+
 .main-right > header {
     margin-top: 70px;
     border-radius: 20px;
     background: hsl(248, 32%, 49%);
-    padding: 1px;
-    width:500px ;
+    padding: 10px;
+    width:540px ;
     text-align: center;
     color: hsl(0, 0%, 95%);
+    font-size: 11px;
+    box-shadow: 2px 5px 2px rgb(101, 99, 99);
+}
+
+.main-right header span {
+    font-weight: 400;
+    font-size: 13px;
 }
 
 .reg-form {
     border-radius: 10px;
     background: white;
-    width: 440px;
+    width: 500px;
     padding: 30px;
     margin-top: 18px;
+    box-shadow: 2px 5px 2px rgb(101, 99, 99);
+}
+
+.reg-form p {
+    color: hsl(0, 4%, 67%);
+    font-size: 10px;
+    text-align: center;
+}
+
+.reg-form p span {
+    color: hsl(0, 100%, 74%);
 }
 
 form {
@@ -87,7 +100,7 @@ form {
       border-radius: 5px;
   }
 
-@media (max-width: 375px) {
+@media screen and (max-width: 375px) {
     .container {
         display: flex;
         flex-direction: column;
@@ -97,7 +110,7 @@ form {
     
 }
 
-@media (min-width: 375px) {
+@media screen and (min-width: 375px) {
     .container {
         display: flex;
         flex-direction: row;
