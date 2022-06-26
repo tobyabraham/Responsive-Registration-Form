@@ -87,10 +87,10 @@ form {
     border: 1px solid hsl(246, 25%, 77%);
   }
 
-  .form-input:focus {
+  /*.form-input:focus {
     border: 1px solid hsl(249, 10%, 26%);
     outline: hsl(249, 10%, 26%);
-  }
+  }*/
 
   .submit-btn {
       padding: 15px;
@@ -100,15 +100,108 @@ form {
       border-radius: 5px;
   }
 
+  .error-message{
+    display: none;
+    margin-bottom: 10px;
+}
+
+.input:invalid:focus{
+    background: url(images/icon-error.svg) no-repeat 96%center white;
+outline: 2px solid hsl(0, 100%, 74%);
+border-radius: 5px;
+}
+ .input:required:focus ~ .error-message{
+    display: block;
+    color: hsl(0, 100%, 74%) ;
+    text-align: right;
+    font-size: 12px;
+    font-style: italic;
+}
+.input:valid:focus ~ .error-message{
+  display: none;
+}
+
+.input:valid{
+    outline: 2px solid silver;
+  }
+.input:required{
+     
+outline: 2px solid transparent;
+ 
+}
+
+
+input[type=email]:invalid:focus::-webkit-input-placeholder{
+   color:hsl(0, 100%, 74%);
+}
 @media screen and (max-width: 375px) {
     .container {
         display: flex;
         flex-direction: column;
-        justify-items: stretch;
+       
         background: url("images/bg-intro-mobile.png");
     }
+
+    .main-left, .main-right {
+        flex: auto;
+    }
+
+    .main-left {
+        padding: 5px 0;
+        margin-left,
+        margin-right: 20px;
+        padding-right: 0px;
+    }
+
+    .main-left > article {
+        margin: auto;
+        width: 100%;
+        color: hsl(0, 0%, 95%);
+        text-align: center;
+    }
+    
+
+    .main-left article p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+
+    .main-right > header {
+        margin-top: 20px;
+        border-radius: 20px;
+        background: hsl(248, 32%, 49%);
+        padding: 4px;
+        margin-left: 10px;
+        width:90% ;
+        text-align: center;
+        color: hsl(0, 0%, 95%);
+        font-size: 11px;
+        box-shadow: 2px 5px 2px rgb(101, 99, 99);
+    }
+    
+    .reg-form {
+        border-radius: 10px;
+        background: white;
+        margin-left: 8px;
+        width: 85%;
+        padding: 15px;
+        margin-top: 18px;
+        box-shadow: 2px 5px 2px rgb(101, 99, 99);
+    }
+
+    .submit-btn {
+        padding: 10px;
+        background-color: hsl(154, 59%, 51%);
+        color: hsl(0, 0%, 95%);
+        border: none;
+        border-radius: 5px;
+    }
+    
     
 }
+
 
 @media screen and (min-width: 375px) {
     .container {
